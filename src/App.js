@@ -98,7 +98,7 @@ const RemoveButton=(id)=>{
 }
 
   return (
-    <div className="App">
+    <div className="App" id="one">
       <input onChange={(e) => setname(e.target.value)} />
       <br />
 
