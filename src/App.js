@@ -99,7 +99,7 @@ const RemoveButton=(id)=>{
 
   return (
     <div className="App" id="one">
-      <input onChange={(e) => setname(e.target.value)} />
+      <input onChange={(e) => setname(e.target.value)} className="good" />
       <br />
 
       <input onChange={(e) => setposter(e.target.value)} />
