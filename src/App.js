@@ -90,34 +90,40 @@ function App() {
     setMovielist([...movielist, movie]);
   };
 
-const RemoveButton=(id)=>{
-  const itemIndex=movielist.findIndex((list)=>list.id===id)
-  movielist.splice(itemIndex,1)
-  setMovielist([...movielist])
-  console.log(itemIndex);
-}
+  const RemoveButton = (id) => {
+    const itemIndex = movielist.findIndex((list) => list.id === id);
+    movielist.splice(itemIndex, 1);
+    setMovielist([...movielist]);
+    console.log(itemIndex);
+  };
 
   return (
     <div className="App" id="one">
       <input onChange={(e) => setname(e.target.value)} className="good" />
-      <br />
 
-      <input onChange={(e) => setposter(e.target.value)} />
-      <br />
-      <input onChange={(e) => setsummary(e.target.value)} />
-      <button onClick={handleClick}>Submit</button>
-      {movielist.map(({ id, name, poster, rating, summary }) => {
-        return (
-          <Movie key={id}
-            id={id}
-            name={name}
-            poster={poster}
-            rating={rating}
-            summary={summary}
-            remo={RemoveButton}
-          />
-        );
-      })}
+      <div className="App">
+        <input onChange={(e) => setname(e.target.value)} />
+
+        <br />
+
+        <input onChange={(e) => setposter(e.target.value)} />
+        <br />
+        <input onChange={(e) => setsummary(e.target.value)} />
+        <button onClick={handleClick}>Submit</button>
+        {movielist.map(({ id, name, poster, rating, summary }) => {
+          return (
+            <Movie
+              key={id}
+              id={id}
+              name={name}
+              poster={poster}
+              rating={rating}
+              summary={summary}
+              remo={RemoveButton}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

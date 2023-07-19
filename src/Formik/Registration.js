@@ -25,7 +25,7 @@ function Registration() {
   console.log(errors);
 
   return (
-    <div className="container">
+    <div className="container" id="register">
       <div className="modal">
         <div className="modal-container">
           <div className="modal-left">
