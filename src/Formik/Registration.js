@@ -26,7 +26,7 @@ function Registration() {
 
   return (
     <div className="container" id="register">
-      <div className="modal">
+      <div className="modal" id="created">
         <div className="modal-container">
           <div className="modal-left">
             <h1 className="modal-title">Welcome!</h1>
